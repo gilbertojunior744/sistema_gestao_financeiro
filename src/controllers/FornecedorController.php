@@ -60,7 +60,7 @@ class FornecedorController
         }
         $fornecedor = $this->fornecedorModel->buscarFornecedorPorId($id);
 
-        include(__DIR__ . '/../views/fornecedores/fornecedor_edit.php'); // Passa os dados para a view
+        include(__DIR__ . '/../views/fornecedores/fornecedor_edit.php'); 
     }
 
     public function cadastrarPost($post)
@@ -85,7 +85,7 @@ class FornecedorController
             echo "<p>Erro ao cadastrar fornecedor.</p>";
         }
 
-        include(__DIR__ . '/../views/fornecedores/fornecedor_form.php'); // Passa os dados para a view
+        include(__DIR__ . '/../views/fornecedores/fornecedor_form.php'); 
 
     }
 }

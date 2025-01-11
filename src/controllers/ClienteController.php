@@ -8,28 +8,25 @@ class ClienteController
 
     public function __construct($db)
     {
-        // Conectar ao banco de dados e criar instância do modelo
         $this->clienteModel = new Cliente($db);
     }
 
-    // Método para listar clientes
     public function listar()
     {
         $clientes = $this->clienteModel->listarClientes();
-        include(__DIR__ . '/../views/clientes/cliente_list.php'); // Passa os dados para a view
+        include(__DIR__ . '/../views/clientes/cliente_list.php'); 
     }
 
     public function showCliente ($id)
     {
         $cliente = $this->clienteModel->buscarClientePorId($id);
         
-        include(__DIR__ . '/../views/clientes/cliente_show.php'); // Passa os dados para a view
+        include(__DIR__ . '/../views/clientes/cliente_show.php'); 
     }
 
-    // Método para exibir o formulário de adição
     public function mostrarFormulario()
     {
-        include(__DIR__ . '/../views/clientes/cliente_form.php'); // Passa os dados para a view
+        include(__DIR__ . '/../views/clientes/cliente_form.php'); 
     }
 
     public function viewEditarCliente($id)
@@ -64,7 +61,7 @@ class ClienteController
         }
         $cliente = $this->clienteModel->buscarClientePorId($id);
 
-        include(__DIR__ . '/../views/clientes/cliente_edit.php'); // Passa os dados para a view
+        include(__DIR__ . '/../views/clientes/cliente_edit.php'); 
     }
 
     public function cadastrarPost($post)
@@ -89,7 +86,7 @@ class ClienteController
             echo "<p>Erro ao cadastrar cliente.</p>";
         }
 
-        include(__DIR__ . '/../views/clientes/cliente_form.php'); // Passa os dados para a view
+        include(__DIR__ . '/../views/clientes/cliente_form.php'); 
 
     }
 }

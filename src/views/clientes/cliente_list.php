@@ -1,6 +1,6 @@
 <?php
 
-include('partials/header.php'); // Passa os dados para a view
+include('partials/header.php'); 
 
 ?>
 
@@ -57,12 +57,12 @@ include('partials/header.php'); // Passa os dados para a view
 
 <?php
 
-// include(__DIR__ . '/../../partials/footer.php'); // Passa os dados para a view
+include('partials/footer.php'); 
 
 
 ?>
  <script>
         $(document).ready(function() {
-            $('#clientesTable').DataTable(); // Ativa o DataTables na tabela
+            $('#clientesTable').DataTable(); 
         });
     </script>
