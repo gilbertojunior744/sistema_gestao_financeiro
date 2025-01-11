@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sistema de Gestão Financeiro</title>
-    <link rel="stylesheet" href="assets/css/styles.min.css" />
+    <base href="/sistema_gestao_financeiro/" />
+    <link rel="stylesheet" href="src/assets/css/styles.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+
 </head>
 
 <body>
@@ -22,7 +25,7 @@
                 <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
                     <ul id="sidebarnav">
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="index.php" aria-expanded="false">
+                            <a class="sidebar-link" href="/sistema_gestao_financeiro/" aria-expanded="false">
                                 <span>
                                     <iconify-icon icon="solar:home-smile-bold-duotone" class="fs-6"></iconify-icon>
                                 </span>
@@ -38,7 +41,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="CLIENTES_form.php" aria-expanded="false">
+                            <a class="sidebar-link" href="/sistema_gestao_financeiro/cliente/listar" aria-expanded="false">
                                 <span>
                                     <iconify-icon icon="solar:home-smile-bold-duotone" class="fs-6"></iconify-icon>
                                 </span>
@@ -46,7 +49,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="./index.html" aria-expanded="false">
+                            <a class="sidebar-link" href="/sistema_gestao_financeiro/fornecedor/listar" aria-expanded="false">
                                 <span>
                                     <iconify-icon icon="solar:home-smile-bold-duotone" class="fs-6"></iconify-icon>
                                 </span>

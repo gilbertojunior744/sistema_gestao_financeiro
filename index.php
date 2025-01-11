@@ -1,10 +1,4 @@
 <?php
-    include("includes/header.php");
 
-?>
-               
-<?php
-    include("includes/footer.php");
-
-?>
-        
+// Inclui o arquivo de rotas
+require_once("router.php");
