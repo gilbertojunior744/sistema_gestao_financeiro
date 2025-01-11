@@ -1,11 +1,6 @@
-# generated files
-target/
-generated/
-
-# dependencies
-Dependencies.toml
-
-# config files
-Config.toml
-# the config files used for testing, Uncomment the following line if you want to commit the test config files
-#!**/tests/Config.toml
+/node_modules/
+Analise.txt
+requisitos.txt
+script db.txt
+CLIENTES_dados.php
+CLIENTES_form.php
