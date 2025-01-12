@@ -190,6 +190,55 @@ switch ($uri) {
         }
         break;
 
+        //Contas Bancárias
+        case '/sistema_gestao_financeiro/contasBancarias/listar':
+            if ($method === 'GET') {
+                require_once __DIR__ . '/src/controllers/ContasBancariasController.php';
+                $controller = new  ContasBancariasController($db->connect());
+                $controller->listar();
+            }
+            break;
+    
+        case '/sistema_gestao_financeiro/contasBancarias/cadastrar':
+            if ($method === 'GET') {
+                require_once __DIR__ . '/src/controllers/ContasBancariasController.php';
+                $controller = new  ContasBancariasController($db->connect());
+                $controller->mostrarFormulario();
+            }
+            break;
+    
+        case '/sistema_gestao_financeiro/contasBancarias/criar':
+            if ($method === 'POST') {
+                require_once __DIR__ . '/src/controllers/ContasBancariasController.php';
+                $controller = new ContasBancariasController($db->connect());
+                $controller->cadastrarPost($_POST);
+            }
+    
+        case '/sistema_gestao_financeiro/contasBancarias/editar/1':
+    
+            if (preg_match('#^/sistema_gestao_financeiro/contasBancarias/editar/(\d+)$#', $uri, $matches)) {
+                if ($method === 'GET') {
+                    require_once __DIR__ . '/src/controllers/ContasBancariasController.php';
+                    $controller = new ContasBancariasController($db->connect());
+                    $id_categoria = $matches[1];
+    
+                    $controller->viewEditarContasBancarias($id_categoria);
+                }
+            }
+            break;
+        case '/sistema_gestao_financeiro/contasBancarias/atualizar/1':
+    
+            if (preg_match('#^/sistema_gestao_financeiro/contasBancarias/atualizar/(\d+)$#', $uri, $matches)) {
+                $id_categoria = $matches[1];
+    
+                if ($method === 'POST') {
+                    require_once __DIR__ . '/src/controllers/ContasBancariasController.php';
+                    $controller = new ContasBancariasController($db->connect());
+                    $controller->editarContasBancarias($id_categoria, $_POST);
+                }
+            }
+            break;
+
     default:
         echo 'Página não encontrada';
         break;

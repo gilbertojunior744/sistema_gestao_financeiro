@@ -1,6 +1,6 @@
 <?php
 
-include('partials/header.php'); // Passa os dados para a view
+include('partials/header.php'); 
 
 ?>
 
@@ -44,6 +44,6 @@ include('partials/header.php'); // Passa os dados para a view
 
 
 <?php
-include('partials/footer.php'); // Passa os dados para a view
+include('partials/footer.php'); 
 
 ?>
